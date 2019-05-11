@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+void foo() {
+	printf("lib\n");
+}
+
+#include <jni.h>
+#include <string>
+
+extern "C" JNIEXPORT jstring JNICALL
+Java_com_example_jnifromvs_MainActivity_stringFromJNI(
+		        JNIEnv *env,
+			        jobject /* this */) {
+	    std::string hello = "Hello from C++";
+	        return env->NewStringUTF(hello.c_str());
+}
+
+
+int main() {
+}
