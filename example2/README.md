@@ -1,8 +1,12 @@
 
-Example that demonstrates the use of the premake android-studio module from:
-https://github.com/polymonster/premake-android-studio
+This is an example that demonstrates the use of the premake android-studio
+module from:
 
-It is a slightly modified version of the example provided by the above repo.
+  https://github.com/polymonster/premake-android-studio
+
+This example is a slightly modified version of the example provided by the above
+repo. (Specifically, the Java file/class name and path, application name are different, 
+and the lua script explicitly points to the manifest file).
 
 
 1. Use premake to generate an Android Studio project.
