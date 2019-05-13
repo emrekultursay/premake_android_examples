@@ -11,10 +11,12 @@ It is a slightly modified version of the example provided by the above repo.
 premake5.exe android-studio
 ```
 
-2. Use Android Studio to import the generated Gradle project at `android/` directory.
-
+2. Use Android Studio to import the generated Gradle project at `android/` directory. You
+can also directly build from the command line, but you will need to copy over gradle wrapper, 
+and create a `local.properties` file.
 
 3. Use Android Studio to Build, Run, Debug the app.
 
-The app does not do anything interesting, so you might want to put a breakpoint in the C++ code
-run the app under the debugger to make sure you have the app running correctly.
+The app does not do anything interesting, it does not have any UI. So, you might want to put
+a breakpoint in the C++ code run the app under the debugger to make sure you have the app
+running correctly.
