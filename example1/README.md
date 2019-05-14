@@ -1,17 +1,22 @@
-This example demonstrates how to build an Android app with C++ using premake, Visual Studio, and Gradle.
+This example demonstrates how to build an Android app with C++ using premake, Visual Studio,
+and Gradle; on Windows.
 
-1. Run premake5 to generate a Visual Studio 2017 project:
+1. Run `premake5.exe` to generate a Visual Studio 2017 project:
 
 ```
 premake5.exe vs2017
 ```
 
-2. Open the project vs2017/MySolution.sln with Visual Studio 2017.
+based on the configuration defined in the `premake5.lua` file.
 
-3. Use Visual Studio to build native-lib.so for arm32, arm64, and x86 binaries for Android.
-To select a particular configuration, use "Build | Configuration Manager" and change both the
-configuration and the platform. The build generates shared libraries at location:
-`vs2017/$ABI/$CONFIG/libnative-lib.so1`.
+2. Open the project `vs2017/MySolution.sln` with Visual Studio 2017.
+
+3. Use Visual Studio to build `native-lib.so` for `ARM32`, `ARM64`, and `X86` ABIs for Android.
+To select a particular configuration, use "Build | Configuration Manager" and change either the
+configuration or the platform. The build generates shared libraries at location:
+
+
+```vs2017/$ABI/$CONFIG/libnative-lib.so1```
 
 4. Use the provided Gradle project under `android/` to package the app. The `build.sh` script
 first copies files from VS output directories to the Gradle project directory (this can probably

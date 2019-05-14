@@ -1,9 +1,8 @@
 #!lua
 
 workspace "MySolution"
-  configurations {
-    "DebugArm64", "DebugArm32", "DebugX86",
-  }
+  configurations { "Debug", "Release" }
+  platforms { "arm64", "arm", "x86" }
   system "android"
   location "vs2017"
 
@@ -15,20 +14,19 @@ project "native-lib"
   files {
     "src/lib/lib.cpp"
   }
-  configuration "DebugArm32"
+
+  configuration "Debug"
     defines {"DEBUG"}
     symbols "On"
-  configuration "DebugArm64"
-    defines {"DEBUG"}
-    symbols "On"
-  configuration "DebugX86"
-     defines {"DEBUG"}
-     symbols "On"
-  filter "configurations:DebugArm32"
-    architecture "arm"
-  filter "configurations:DebugArm64"
+  configuration "Release"
+    defines {"NDEBUG"}
+    optimize "On"
+
+  filter "platforms:arm64"
     architecture "arm64"
-  filter "configurations:DebugX86"
+  filter "platforms:arm"
+    architecture "arm"
+  filter "platforms:x86"
     architecture "x86"
 
 
