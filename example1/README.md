@@ -23,6 +23,9 @@ first copies files from VS output directories to the Gradle project directory (t
 be done in a nicer way using the postbuildcommands in premake). It then invokes the
 `gradlew assembleDebug` command to generate an APK.
 
+5. In order to debug/profile the app, import the generated APK into Android Studio.
+Importing the generated Gradle project can also work, but since the `.so` files are stripped,
+the debugger will not be able to find symbol files automatically.
 
 In short:
 
@@ -38,4 +41,7 @@ premake5.exe vs2017
 # Step 3: Package APK.
 cd android/
 ./build.sh
+
+# Step 4: Use Android Studio to debug/profile APK.
 ```
+
