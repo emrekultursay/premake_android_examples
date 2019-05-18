@@ -14,3 +14,7 @@ project. The generated Gradle project contains gradle and CMake files that point
 other resource files to include. You can import the Gradle project into Android Studio, and
 build/develop/package/debug the app there.
 
+In example 3, the built-in `android` module of premake is used to dynamically generate a Visual Studio 2017
+project for Android, similar to example 1. Unlike example 1, this example also demonstrates how to use
+packaging `kind` of Premake, which generates a Visual Studio `.androidproj` project. This project is capable
+of building Java code, and packaging APKs using ANT build system.
