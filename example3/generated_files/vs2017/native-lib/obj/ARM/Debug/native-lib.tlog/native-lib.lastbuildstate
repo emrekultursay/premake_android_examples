@@ -1,0 +1,2 @@
+#TargetFrameworkVersion=:PlatformToolSet=Clang_5_0:EnableManagedIncrementalBuild=:VCToolArchitecture=Native32Bit:WindowsTargetPlatformVersion=
+Debug|ARM|C:\Users\emrekultursay\premake_android_examples\example3\vs2017\|
